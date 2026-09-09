@@ -106,7 +106,7 @@ img { max-width: 100%; }
 }
 
 .quote-text {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Schoolbell', serif;
   font-style: italic;
   font-size: 1rem;
   line-height: 1.7;
@@ -214,7 +214,7 @@ img { max-width: 100%; }
   font-family: 'Schoolbell', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   color: var(--maroon);
   margin: 6px 0 10px;
 }
@@ -226,12 +226,11 @@ img { max-width: 100%; }
   font-size: 0.95rem;
   color: var(--ink);
   max-width: 260px;
-  margin: 0 auto -10px;
+  margin: 0 auto 1px;
 }
 
 .cover-date {
   font-family: 'Schoolbell', sans-serif;
-  font-weight: 600;
   letter-spacing: 2px;
   font-size: 1.2rem;
   color: var(--maroon);
@@ -271,7 +270,6 @@ img { max-width: 100%; }
 .savedate-title { font-size: 2.1rem; margin: 20px 0 -5px; font-family: 'Schoolbell', sans-serif; letter-spacing: 5px; }
 .savedate-date {
   font-family: 'Schoolbell', sans-serif;
-  font-weight: 600;
   color: var(--maroon);
   font-size: 1.5rem;
   letter-spacing: 5px;
@@ -344,16 +342,16 @@ img { max-width: 100%; }
 .music-controls svg { width: 18px; height: 18px; fill: var(--white); }
 
 .music-caption {
-  font-family: 'Caveat', serif;
+  font-family: 'Schoolbell', serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--ink);
   max-width: 240px;
 }
 
 /* ================= FRAME: BRIDE & GROOM ================= */
 
-.bng-heading { font-family: "Give You Glory", 'Caveat', serif; font-size: 2rem; margin: 10px 0 26px; }
+.bng-heading { font-size: 2rem; margin: 10px 0 26px; }
 
 .bng-person {
   display: flex;
@@ -367,7 +365,7 @@ img { max-width: 100%; }
 .bng-person.reverse { flex-direction: row-reverse; text-align: right; }
 
 .polaroid {
-  width: 128px;
+  width: 108px;
   background: var(--white);
   padding: 8px 8px 24px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
@@ -393,14 +391,15 @@ img { max-width: 100%; }
   margin-bottom: 4px;
 }
 .bng-info p {
-  font-size: 1.2rem;
-  font-family: 'Caveat', sans-serif;
+  font-size: 0.9rem;
+  font-family: 'Schoolbell', sans-serif;
+  font-weight: 600;
   line-height: 1.4;
   margin: 0;
   color: var(--ink);
 }
 
-.bng-heart { width: 80% }
+.bng-heart { margin: 14px 0; width: 26px; }
 
 .bng-social {
   margin-top: 20px;
@@ -520,6 +519,7 @@ img { max-width: 100%; }
   border-radius: 22px;
   padding: 34px 22px 28px;
   margin-top: 10px;
+  background: var(--pink-bg-soft);
 }
 .corner-heart { position: absolute; width: 34px; opacity: 0.9; }
 .corner-heart.tl { top: -6px; left: -6px; transform: scaleX(-1); }
@@ -531,8 +531,8 @@ img { max-width: 100%; }
 .envelope-icon { width: 36px; position: absolute; top: -6px; right: 4px; }
 
 .lovestory-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.92rem;
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 1.1rem;
   line-height: 1.75;
   color: var(--ink);
   text-align: left;
@@ -543,6 +543,7 @@ img { max-width: 100%; }
 
 .gift-title { margin-bottom: 14px; }
 .gift-text {
+  font-family: 'Schoolbell', sans-serif;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--ink);

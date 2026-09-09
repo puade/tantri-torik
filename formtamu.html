@@ -225,22 +225,6 @@
         #outputArea {
             display: none;
         }
-
-        .ucapan-admin-row {
-            background-color: var(--input-bg);
-            border-radius: 10px;
-            padding: 10px 14px;
-            margin-bottom: 10px;
-            border: 1px solid var(--input-border);
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .ucapan-admin-row .info { flex: 1; }
-        .ucapan-admin-row .info b { color: var(--secondary-color); }
-        .ucapan-admin-row .info small { color: var(--text-muted); display: block; margin-bottom: 4px; }
-        .ucapan-admin-row .info p { margin: 4px 0 0; color: var(--text-color); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -276,18 +260,9 @@
         </button>
         
         <!-- Catatan: Tidak ada tombol "Buat Undangan" global karena setiap baris punya tombol copy masing-masing -->
-        <div class="text-muted small mt-2" >
-            <a style="color: #e0e0e0;"><i class="bi bi-info-circle"></i> Setiap baris berdiri sendiri. Klik icon <i class="bi bi-files"></i> untuk salin undangan dengan nama tamu itu.</a>
+        <div class="text-muted small mt-2">
+            <i class="bi bi-info-circle"></i> Setiap baris berdiri sendiri. Klik icon <i class="bi bi-files"></i> untuk salin undangan dengan nama tamu itu.
         </div>
-    </div>
-
-    <div class="card">
-        <h2 class="card-title">Kelola Ucapan &amp; Doa</h2>
-        <p class="subtitle">Daftar ucapan dari tamu. Klik ikon sampah untuk menghapus.</p>
-        <div id="ucapanAdminList"></div>
-        <button id="refreshUcapanBtn" class="btn-add">
-            <i class="bi bi-arrow-clockwise"></i> Muat Ulang
-        </button>
     </div>
     
     <div class="divider"></div>
@@ -324,7 +299,187 @@
 </div>
 
 <script>
-    (function(_0x48b5f5,_0x3b0b9d){const _0x56c6d6=_0x5503,_0x199eb0=_0x48b5f5();while(!![]){try{const _0x253950=parseInt(_0x56c6d6(0xf5))/0x1+parseInt(_0x56c6d6(0xf3))/0x2*(-parseInt(_0x56c6d6(0x104))/0x3)+parseInt(_0x56c6d6(0xdd))/0x4+-parseInt(_0x56c6d6(0xc9))/0x5+parseInt(_0x56c6d6(0x112))/0x6+-parseInt(_0x56c6d6(0xd7))/0x7*(parseInt(_0x56c6d6(0xf4))/0x8)+-parseInt(_0x56c6d6(0x109))/0x9;if(_0x253950===_0x3b0b9d)break;else _0x199eb0['push'](_0x199eb0['shift']());}catch(_0x10d175){_0x199eb0['push'](_0x199eb0['shift']());}}}(_0x3624,0xe50dd),(function(){const _0x53208d=_0x5503,_0x5378fd=document['getElementById']('guestsContainer'),_0x380c7d=document[_0x53208d(0x10a)](_0x53208d(0x106)),_0x4f43d3=document[_0x53208d(0x10a)]('inputPriaWanita');let _0x2ef0ea=0x0;function _0x272fe5(_0x6d4fb1){const _0x293b0e=_0x53208d;if(!_0x6d4fb1[_0x293b0e(0x100)]())return'';return _0x6d4fb1[_0x293b0e(0x100)]()[_0x293b0e(0xb7)](/\s+/)[_0x293b0e(0xfa)](_0x32b89b=>_0x32b89b[_0x293b0e(0xdf)](0x0)[_0x293b0e(0xef)]()+_0x32b89b[_0x293b0e(0xd2)](0x1)[_0x293b0e(0xce)]())[_0x293b0e(0xc6)]('+');}function _0x435e69(_0x57446d,_0x5519ea){const _0x39721d=_0x53208d,_0x56dc1f=_0x272fe5(_0x57446d)||_0x39721d(0xc1);return _0x39721d(0xec)+_0x56dc1f+_0x39721d(0x10e)+_0x5519ea;}function _0x3c17e5(_0x57be00,_0xe84626){const _0x31e84d=_0x53208d;if(!_0x57be00)return![];const _0x4ceb2b=document[_0x31e84d(0xe0)]('textarea');_0x4ceb2b[_0x31e84d(0x113)]=_0x57be00,document[_0x31e84d(0xea)][_0x31e84d(0xb9)](_0x4ceb2b),_0x4ceb2b[_0x31e84d(0xcb)]();try{const _0x571000=document[_0x31e84d(0x10f)](_0x31e84d(0x103));return _0x571000&&(_0xe84626[_0x31e84d(0x101)][_0x31e84d(0xfb)]('success'),setTimeout(()=>{const _0x14fa0e=_0x31e84d;_0xe84626[_0x14fa0e(0x101)][_0x14fa0e(0xf8)]('success');},0x3e8)),document[_0x31e84d(0xea)]['removeChild'](_0x4ceb2b),_0x571000;}catch(_0x57222e){return document[_0x31e84d(0xea)][_0x31e84d(0x10d)](_0x4ceb2b),![];}}function _0x1b8270(_0x5815c0=''){const _0x58cfbb=_0x53208d,_0x1ba713='guest_'+Date[_0x58cfbb(0xcc)]()+'_'+Math['random']()[_0x58cfbb(0x10b)](0x24)[_0x58cfbb(0xdc)](0x2,0x8),_0x163683=document[_0x58cfbb(0xe0)]('div');_0x163683['className']=_0x58cfbb(0xbb),_0x163683[_0x58cfbb(0xe5)]['rowId']=_0x1ba713;const _0x573604=document[_0x58cfbb(0xe0)](_0x58cfbb(0xc2));_0x573604[_0x58cfbb(0xe4)]=_0x58cfbb(0xf9),_0x573604['className']=_0x58cfbb(0xf2),_0x573604['placeholder']='Contoh:\x20Fulan\x20Bersama\x20Istri',_0x573604['value']=_0x5815c0;const _0x1dabd2=document[_0x58cfbb(0xe0)](_0x58cfbb(0xca));_0x1dabd2[_0x58cfbb(0xfe)]=_0x58cfbb(0xdb),_0x1dabd2[_0x58cfbb(0xe2)]=_0x58cfbb(0xde),_0x1dabd2[_0x58cfbb(0xf7)]=_0x58cfbb(0xc4),_0x1dabd2[_0x58cfbb(0xd5)]('click',function(_0x3f4f79){const _0x4c80cd=_0x58cfbb;_0x3f4f79[_0x4c80cd(0xd9)](),_0x573604[_0x4c80cd(0x113)]='',_0x573604['focus'](),_0x163683[_0x4c80cd(0x101)][_0x4c80cd(0xf8)]('success');});const _0x1b279e=document[_0x58cfbb(0xe0)]('button');return _0x1b279e['className']=_0x58cfbb(0xf6),_0x1b279e[_0x58cfbb(0xe2)]=_0x58cfbb(0xe9),_0x1b279e['title']=_0x58cfbb(0xf1),_0x1b279e[_0x58cfbb(0xd5)](_0x58cfbb(0xbc),function(_0x29bcbf){const _0x5a08b1=_0x58cfbb;_0x29bcbf[_0x5a08b1(0xd9)]();const _0x4cc3b6=_0x573604[_0x5a08b1(0x113)][_0x5a08b1(0x100)](),_0x3368c9=_0x4f43d3[_0x5a08b1(0x113)][_0x5a08b1(0x100)]()||_0x5a08b1(0x10c);if(!_0x4cc3b6){alert(_0x5a08b1(0xff)),_0x573604[_0x5a08b1(0xc7)]();return;}const _0x257a9a=_0x435e69(_0x4cc3b6,_0x3368c9),_0x56ba3f=_0x3c17e5(_0x257a9a,_0x163683);if(_0x56ba3f){}else alert(_0x5a08b1(0x102));}),_0x163683[_0x58cfbb(0xb9)](_0x573604),_0x163683[_0x58cfbb(0xb9)](_0x1dabd2),_0x163683[_0x58cfbb(0xb9)](_0x1b279e),_0x163683;}function _0xf78be5(_0x515d7b=''){const _0x54f498=_0x1b8270(_0x515d7b);_0x5378fd['appendChild'](_0x54f498),_0x2ef0ea++;}for(let _0x18f155=0x0;_0x18f155<0x5;_0x18f155++){_0xf78be5('');}_0x380c7d['addEventListener'](_0x53208d(0xbc),function(){_0xf78be5('');});const _0x3315a0=document[_0x53208d(0x10a)](_0x53208d(0x107)),_0x235149=document[_0x53208d(0x10a)](_0x53208d(0xd8)),_0x3f3308=document[_0x53208d(0x10a)](_0x53208d(0xc8));_0x235149[_0x53208d(0xd5)](_0x53208d(0xbc),function(){const _0x390b57=_0x53208d;_0x3315a0[_0x390b57(0xfc)]['display']=_0x390b57(0xba);}),_0x3f3308[_0x53208d(0xd5)](_0x53208d(0xbc),function(){const _0x171e9c=_0x53208d;_0x3315a0[_0x171e9c(0xfc)]['display']=_0x171e9c(0xc3);}),_0x3315a0['addEventListener'](_0x53208d(0xbc),function(_0x4ba8eb){const _0x4fa445=_0x53208d;_0x4ba8eb[_0x4fa445(0xe6)]===_0x3315a0&&(_0x3315a0[_0x4fa445(0xfc)][_0x4fa445(0xeb)]=_0x4fa445(0xc3));}),window[_0x53208d(0xd5)](_0x53208d(0xd6),function(){}),(function(){const _0x20bf58=_0x53208d,_0x5e02d1=_0x20bf58(0xd0),_0xbc468a=document[_0x20bf58(0x10a)](_0x20bf58(0xda)),_0xb37e11=document[_0x20bf58(0x10a)](_0x20bf58(0x105));function _0x377e8d(){const _0x313391=_0x20bf58;_0xbc468a[_0x313391(0xe2)]=_0x313391(0xbf),fetch(_0x5e02d1)[_0x313391(0xd3)](_0x991f0=>_0x991f0[_0x313391(0xb8)]())[_0x313391(0xd3)](_0x49efef=>{const _0x2300f0=_0x313391;_0x49efef[_0x2300f0(0xbe)]((_0x2a6bdb,_0x3246b1)=>new Date(_0x3246b1[_0x2300f0(0xee)])-new Date(_0x2a6bdb[_0x2300f0(0xee)])),_0x34d4fb(_0x49efef);})[_0x313391(0xfd)](()=>{_0xbc468a['innerHTML']='<p\x20class=\x22text-danger\x20small\x22>Gagal\x20memuat\x20data.</p>';});}function _0x34d4fb(_0x5e5d2f){const _0x1851f1=_0x20bf58;if(!_0x5e5d2f[_0x1851f1(0xd1)]){_0xbc468a[_0x1851f1(0xe2)]='<p\x20class=\x22text-muted\x20small\x22>Belum\x20ada\x20ucapan.</p>';return;}_0xbc468a['innerHTML']='',_0x5e5d2f[_0x1851f1(0xc5)](_0x36229d=>{const _0x27d77a=_0x1851f1,_0x5c2543=document[_0x27d77a(0xe0)](_0x27d77a(0xe1));_0x5c2543[_0x27d77a(0xfe)]=_0x27d77a(0x110);const _0x11e3b9=new Date(_0x36229d[_0x27d77a(0xee)]);_0x5c2543['innerHTML']=_0x27d77a(0xcf)+_0x11e3b9['toLocaleDateString']()+'\x20'+_0x11e3b9[_0x27d77a(0xe3)]()+_0x27d77a(0xd4)+_0x36229d[_0x27d77a(0x114)]+_0x27d77a(0x108)+_0x36229d[_0x27d77a(0x116)]+_0x27d77a(0xe8)+_0x36229d['pesan']+_0x27d77a(0xed);const _0x295d02=document[_0x27d77a(0xe0)]('button');_0x295d02[_0x27d77a(0xfe)]=_0x27d77a(0xdb),_0x295d02[_0x27d77a(0xe2)]=_0x27d77a(0xf0),_0x295d02[_0x27d77a(0xf7)]=_0x27d77a(0xe7),_0x295d02[_0x27d77a(0xc0)]=!_0x36229d['id'],_0x295d02[_0x27d77a(0xd5)]('click',function(){const _0x2d34a1=_0x27d77a;if(!_0x36229d['id']){alert('Ucapan\x20ini\x20tidak\x20punya\x20ID\x20(data\x20lama),\x20tidak\x20bisa\x20dihapus\x20otomatis.');return;}if(!confirm('Hapus\x20ucapan\x20dari\x20'+_0x36229d['nama']+'?'))return;fetch(_0x5e02d1,{'method':_0x2d34a1(0x111),'headers':{'Content-Type':_0x2d34a1(0x115)},'body':new URLSearchParams({'action':_0x2d34a1(0xcd),'id':_0x36229d['id']})})[_0x2d34a1(0xd3)](_0x349bcd=>_0x349bcd[_0x2d34a1(0xb8)]())[_0x2d34a1(0xd3)](()=>_0x377e8d())[_0x2d34a1(0xfd)](()=>alert(_0x2d34a1(0xbd)));}),_0x5c2543[_0x27d77a(0xb9)](_0x295d02),_0xbc468a[_0x27d77a(0xb9)](_0x5c2543);});}_0xb37e11[_0x20bf58(0xd5)]('click',_0x377e8d),_0x377e8d();}());}()));function _0x5503(_0x497b38,_0x6c27c6){_0x497b38=_0x497b38-0xb7;const _0x362438=_0x3624();let _0x55038a=_0x362438[_0x497b38];return _0x55038a;}function _0x3624(){const _0xfe9be=['load','2184sSVrIx','tutorialButton','stopPropagation','ucapanAdminList','action-btn\x20clear','substr','6380496JcZFdC','<i\x20class=\x22bi\x20bi-x-lg\x22></i>','charAt','createElement','div','innerHTML','toLocaleTimeString','type','dataset','target','Hapus\x20ucapan\x20ini',')\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>','<i\x20class=\x22bi\x20bi-files\x22></i>','body','display','Bismillahirrahmanirrahim\x0a\x0aDengan\x20memohon\x20rahmat\x20dan\x20ridho\x20Allah\x20Subhanahu\x20Wa\x20Ta\x27ala,\x20\x20\x0akami\x20bermaksud\x20mengundang\x20Bapak/Ibu/Saudara/i\x20\x20\x0auntuk\x20menghadiri\x20**Resepsi\x20Pernikahan**.\x0a\x0aBerikut\x20link\x20undangan\x20kami,\x20untuk\x20info\x20lengkap\x20acara\x20dapat\x20dikunjungi\x20di:\x0a\x0ahttps://puade.my.id/tantri-torik/?kepada=','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','waktu','toUpperCase','<i\x20class=\x22bi\x20bi-trash\x22></i>','Salin\x20undangan\x20untuk\x20nama\x20ini','guest-input','481588tDCiwZ','4216FVoNrO','1469553sUDSjT','action-btn\x20copy','title','remove','text','map','add','style','catch','className','Silakan\x20isi\x20nama\x20tamu\x20terlebih\x20dahulu.','trim','classList','Gagal\x20menyalin\x20teks.\x20Coba\x20lagi.','copy','6anYRZT','refreshUcapanBtn','addGuestBtn','popupTutorial','</b>\x20(','9374580lSKjkk','getElementById','toString','Anisa\x20dan\x20Arul','removeChild','\x0a\x0aMerupakan\x20suatu\x20kehormatan\x20dan\x20kebahagiaan\x20bagi\x20kami\x20\x20\x0aapabila\x20Bapak/Ibu/Saudara/i\x20berkenan\x20hadir\x20\x20\x0aserta\x20memberikan\x20Doa\x20dan\x20Restunya\x20kepada\x20kami.\x0a\x0aAtas\x20kehadiran\x20dan\x20doanya\x20kami\x20ucapkan\x20terima\x20kasih.\x0a\x0aWassalamualaikum\x20Warahmatullahi\x20Wabarakatuh\x0a\x0aHormat\x20kami,\x0a','execCommand','ucapan-admin-row','POST','3692610Psliak','value','nama','application/x-www-form-urlencoded','kehadiran','split','json','appendChild','block','guest-row','click','Gagal\x20menghapus\x20ucapan.','sort','<p\x20class=\x22text-muted\x20small\x22>Memuat...</p>','disabled','Tamu+Undangan','input','none','Hapus\x20input','forEach','join','focus','closeTutorial','5271375wBXsCm','button','select','now','delete','toLowerCase','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<small>','https://script.google.com/macros/s/AKfycbzS9JmzUXuXV_N9F-MU9IofdO5KS6hT2NkWVP3U1O3Wev7DwB_1rsdGwmQNXZUyY43t/exec','length','slice','then','</small>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<b>','addEventListener'];_0x3624=function(){return _0xfe9be;};return _0x3624();}
+    (function() {
+        // Elemen-elemen utama
+        const guestsContainer = document.getElementById('guestsContainer');
+        const addGuestBtn = document.getElementById('addGuestBtn');
+        const namaMempelaiInput = document.getElementById('inputPriaWanita');
+        
+        // State: jumlah baris awal = 5
+        let guestCount = 0;
+        
+        // Fungsi untuk membuat format nama (kapital tiap kata dan gabung dengan '+')
+        function formatNamaForURL(nama) {
+            if (!nama.trim()) return '';
+            return nama
+                .trim()
+                .split(/\s+/)  // pisah berdasarkan spasi
+                .map(kata => kata.charAt(0).toUpperCase() + kata.slice(1).toLowerCase())
+                .join('+');
+        }
+        
+        // Fungsi untuk menghasilkan teks undangan berdasarkan nama tamu dan nama mempelai
+        function generateUndanganText(namaTamu, namaMempelai) {
+            const formattedNama = formatNamaForURL(namaTamu) || 'Tamu+Undangan'; // fallback jika kosong
+            
+            return `Bismillahirrahmanirrahim
+
+Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala,  
+kami bermaksud mengundang Bapak/Ibu/Saudara/i  
+untuk menghadiri **Resepsi Pernikahan**.
+
+Berikut link undangan kami, untuk info lengkap acara dapat dikunjungi di:
+
+https://puade.github.io/tantri-torik/?kepada=${formattedNama}
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami  
+apabila Bapak/Ibu/Saudara/i berkenan hadir  
+serta memberikan Doa dan Restunya kepada kami.
+
+Atas kehadiran dan doanya kami ucapkan terima kasih.
+
+Wassalamualaikum Warahmatullahi Wabarakatuh
+
+Hormat kami,
+${namaMempelai}`;
+        }
+        
+        // Fungsi untuk menyalin teks ke clipboard
+        function copyTextToClipboard(text, rowElement) {
+            if (!text) return false;
+            
+            // Buat textarea sementara
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    // Feedback: tambah class success ke row, lalu hilangkan setelah 1.5 detik?
+                    rowElement.classList.add('success');
+                    // Hapus class setelah 1 detik agar user lihat hijau, lalu kembali normal
+                    setTimeout(() => {
+                        rowElement.classList.remove('success');
+                    }, 1000);
+                }
+                document.body.removeChild(textArea);
+                return successful;
+            } catch (err) {
+                document.body.removeChild(textArea);
+                return false;
+            }
+        }
+        
+        // Fungsi untuk membuat satu baris input tamu (dengan tombol X dan Copy)
+        function createGuestRow(initialValue = '') {
+            const rowId = 'guest_' + Date.now() + '_' + Math.random().toString(36).substr(2, 8);
+            
+            // Elemen utama row
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'guest-row';
+            rowDiv.dataset.rowId = rowId;
+            
+            // Input field
+            const inputField = document.createElement('input');
+            inputField.type = 'text';
+            inputField.className = 'guest-input';
+            inputField.placeholder = 'Contoh: Fulan Bersama Istri';
+            inputField.value = initialValue;
+            
+            // Tombol Clear (X)
+            const clearBtn = document.createElement('button');
+            clearBtn.className = 'action-btn clear';
+            clearBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+            clearBtn.title = 'Hapus input';
+            clearBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                inputField.value = '';
+                inputField.focus();
+                // Hapus juga class success jika ada
+                rowDiv.classList.remove('success');
+            });
+            
+            // Tombol Copy (📄) - menggunakan ikon bi-files
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'action-btn copy';
+            copyBtn.innerHTML = '<i class="bi bi-files"></i>';
+            copyBtn.title = 'Salin undangan untuk nama ini';
+            
+            copyBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const namaTamu = inputField.value.trim();
+                const namaMempelai = namaMempelaiInput.value.trim() || 'Anisa dan Arul'; // fallback
+                
+                if (!namaTamu) {
+                    alert('Silakan isi nama tamu terlebih dahulu.');
+                    inputField.focus();
+                    return;
+                }
+                
+                const undanganText = generateUndanganText(namaTamu, namaMempelai);
+                const success = copyTextToClipboard(undanganText, rowDiv);
+                
+                if (success) {
+                    // Feedback tambahan: sudah diatur di copyTextToClipboard lewat class
+                    // Tapi kita bisa menampilkan notifikasi kecil jika mau
+                } else {
+                    alert('Gagal menyalin teks. Coba lagi.');
+                }
+            });
+            
+            // Susun elemen
+            rowDiv.appendChild(inputField);
+            rowDiv.appendChild(clearBtn);
+            rowDiv.appendChild(copyBtn);
+            
+            return rowDiv;
+        }
+        
+        // Fungsi untuk menambahkan baris baru ke container
+        function addNewGuestRow(initialValue = '') {
+            const newRow = createGuestRow(initialValue);
+            guestsContainer.appendChild(newRow);
+            guestCount++;
+        }
+        
+        // Inisialisasi: buat 5 baris kosong
+        for (let i = 0; i < 5; i++) {
+            addNewGuestRow('');
+        }
+        
+        // Event listener untuk tombol "+ Tambah Tamu"
+        addGuestBtn.addEventListener('click', function() {
+            addNewGuestRow('');
+        });
+        
+        // ===== TUTORIAL POPUP (sama seperti asli) =====
+        const popup = document.getElementById('popupTutorial');
+        const tutorialBtn = document.getElementById('tutorialButton');
+        const closeBtn = document.getElementById('closeTutorial');
+        
+        tutorialBtn.addEventListener('click', function() {
+            popup.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+        
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+        
+        // Opsional: mengisi inputPriaWanita sudah di-set via value, tidak perlu window.onload
+        // Tapi jika ingin dipastikan, bisa juga:
+        window.addEventListener('load', function() {
+            // sudah ada value "Anisa dan Arul" di html
+        });
+        
+    })();
 </script>
 
 <!-- Bootstrap JS (optional, untuk beberapa komponen) -->
