@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const recipientName = urlParams.get('kepada');
 
 if (recipientName) {
-  const newUrl = `https://puade.github.io/tantri-torik/?kepada=${recipientName}`;
+  const newUrl = `https://puade.my.id/tantri-torik/?kepada=${recipientName}`;
   document.querySelector('meta[property="og:url"]').setAttribute("content", newUrl);
   document.getElementById('recipient-name').textContent = recipientName.replace(/\+/g, ' ');
 }
