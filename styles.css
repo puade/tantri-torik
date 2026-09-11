@@ -194,7 +194,7 @@ img { max-width: 100%; }
 .cover-photo-wrap {
   position: relative;
   width: 250px;
-  margin: 0 auto 18px;
+  margin: 0 auto 5px;
 }
 .cover-photo-frame {
   width: 100%;
